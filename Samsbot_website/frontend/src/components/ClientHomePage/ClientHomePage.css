@@ -1,0 +1,23 @@
+.restImage {
+    width: 100%;
+    height: 300px;
+}
+
+.searchLayout {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchBtn {
+    width: 30px;
+    height: 30px;
+}
+
+.searchbar {
+    margin-right: 10px;
+}
+
+.cuisineFilter {
+    width: 30%;
+    margin-left: auto;
+}

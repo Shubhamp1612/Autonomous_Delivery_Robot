@@ -1,0 +1,14 @@
+.itemLayout {
+    display: flex;
+    flex-direction: row;
+}
+
+.itemImage {
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+}
+
+.itemDetails {
+    padding: 30px;
+}

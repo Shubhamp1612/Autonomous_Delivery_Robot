@@ -1,0 +1,30 @@
+.orderLayout {
+    padding: 30px;
+}
+
+.flexLayout1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.cancelBtn {
+    float: right;
+} 
+
+.orderItemLayout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.orderItemImage {
+    width: 250px;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.orderItemDetails {
+    padding: 30px;
+}

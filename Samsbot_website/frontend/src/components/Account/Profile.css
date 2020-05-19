@@ -1,0 +1,14 @@
+.divStyle {
+    float: right;
+    width: 75%;
+    margin-left: 10px;
+}
+
+.imageUploadPlaceholder {
+    margin: 0 auto;
+}
+
+.profileImage {
+    max-width: 150px;
+    max-height: 150px;
+}

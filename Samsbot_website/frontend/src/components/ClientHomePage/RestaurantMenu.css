@@ -1,0 +1,37 @@
+.sectionsLayout {
+    padding: 20px;
+}
+
+.menuLayout {
+    margin-top: 20px;
+}
+
+.itemLayout {
+    display: flex;
+    flex-direction: row;
+}
+
+.itemImage {
+    min-width: 300px;
+    min-height: 200px;
+    padding: 30px;
+}
+
+.itemDetails {
+    padding: 30px;
+}
+
+.itemImageLayout {
+    width: 60%;
+    height: 60%;
+    padding: 30px;
+}
+
+.goToCart {
+    margin-bottom: 20px;
+}
+
+.cartIcon {
+    width: 50px;
+    height: 50px;
+}

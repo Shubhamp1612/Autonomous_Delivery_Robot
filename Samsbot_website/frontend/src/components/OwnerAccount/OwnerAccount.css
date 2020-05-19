@@ -1,0 +1,12 @@
+.layout {
+    display: flex;
+    flex-direction: row;
+}
+.sidebar {
+    width: 25%;
+    float: left;
+}
+
+.titleStyle {
+    padding: 15px;
+}
