@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nvidia/catkin_ws/src/navigation/map_server/devel/setup.sh

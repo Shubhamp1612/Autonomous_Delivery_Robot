@@ -1,0 +1,60 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c74be/fast"
+make[3]: Entering directory '/home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c74be.dir/build.make CMakeFiles/cmTC_c74be.dir/build
+make[4]: Entering directory '/home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c74be.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c74be.dir/CheckSymbolExists.c.o   -c /home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c74be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c74be.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c74be.dir/CheckSymbolExists.c.o  -o cmTC_c74be 
+CMakeFiles/cmTC_c74be.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c74be.dir/build.make:97: recipe for target 'cmTC_c74be' failed
+make[4]: *** [cmTC_c74be] Error 1
+make[4]: Leaving directory '/home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c74be/fast' failed
+make[3]: *** [cmTC_c74be/fast] Error 2
+make[3]: Leaving directory '/home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+File /home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_853d2/fast"
+make[3]: Entering directory '/home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_853d2.dir/build.make CMakeFiles/cmTC_853d2.dir/build
+make[4]: Entering directory '/home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_853d2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_853d2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_853d2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_853d2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_853d2.dir/CheckFunctionExists.c.o  -o cmTC_853d2 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_853d2.dir/build.make:97: recipe for target 'cmTC_853d2' failed
+make[4]: *** [cmTC_853d2] Error 1
+make[4]: Leaving directory '/home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_853d2/fast' failed
+make[3]: *** [cmTC_853d2/fast] Error 2
+make[3]: Leaving directory '/home/nvidia/catkin_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+

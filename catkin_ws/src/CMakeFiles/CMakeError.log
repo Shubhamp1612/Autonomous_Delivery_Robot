@@ -1,0 +1,486 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2e493/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2e493.dir/build.make CMakeFiles/cmTC_2e493.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2e493.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_2e493.dir/CheckSymbolExists.c.o   -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_2e493
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e493.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2e493.dir/CheckSymbolExists.c.o  -o cmTC_2e493 
+CMakeFiles/cmTC_2e493.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2e493.dir/build.make:97: recipe for target 'cmTC_2e493' failed
+make[1]: *** [cmTC_2e493] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2e493/fast' failed
+make: *** [cmTC_2e493/fast] Error 2
+
+File /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5453d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5453d.dir/build.make CMakeFiles/cmTC_5453d.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5453d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5453d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5453d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5453d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_5453d.dir/CheckFunctionExists.c.o  -o cmTC_5453d -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5453d.dir/build.make:97: recipe for target 'cmTC_5453d' failed
+make[1]: *** [cmTC_5453d] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5453d/fast' failed
+make: *** [cmTC_5453d/fast] Error 2
+
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ebac4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ebac4.dir/build.make CMakeFiles/cmTC_ebac4.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ebac4.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_ebac4.dir/CheckSymbolExists.cxx.o -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+CMakeFiles/cmTC_ebac4.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_ebac4.dir/CheckSymbolExists.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_ebac4.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ebac4/fast' failed
+make: *** [cmTC_ebac4/fast] Error 2
+
+File /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5097e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5097e.dir/build.make CMakeFiles/cmTC_5097e.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5097e.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_5097e.dir/CheckSymbolExists.cxx.o -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+CMakeFiles/cmTC_5097e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_5097e.dir/CheckSymbolExists.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_5097e.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5097e/fast' failed
+make: *** [cmTC_5097e/fast] Error 2
+
+File /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_94807/fast"
+/usr/bin/make -f CMakeFiles/cmTC_94807.dir/build.make CMakeFiles/cmTC_94807.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_94807.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_94807.dir/CheckSymbolExists.cxx.o -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+CMakeFiles/cmTC_94807.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_94807.dir/CheckSymbolExists.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_94807.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_94807/fast' failed
+make: *** [cmTC_94807/fast] Error 2
+
+File /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4fa65/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4fa65.dir/build.make CMakeFiles/cmTC_4fa65.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4fa65.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_4fa65.dir/CheckIncludeFile.cxx.o -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: No such file or directory
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_4fa65.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_4fa65.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_4fa65.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4fa65/fast' failed
+make: *** [cmTC_4fa65/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1526e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1526e.dir/build.make CMakeFiles/cmTC_1526e.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1526e.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_1526e.dir/CheckSymbolExists.c.o   -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1526e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1526e.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1526e.dir/CheckSymbolExists.c.o  -o cmTC_1526e 
+CMakeFiles/cmTC_1526e.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1526e.dir/build.make:97: recipe for target 'cmTC_1526e' failed
+make[1]: *** [cmTC_1526e] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1526e/fast' failed
+make: *** [cmTC_1526e/fast] Error 2
+
+File /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c0128/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c0128.dir/build.make CMakeFiles/cmTC_c0128.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c0128.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c0128.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c0128
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0128.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_c0128.dir/CheckFunctionExists.c.o  -o cmTC_c0128 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c0128.dir/build.make:97: recipe for target 'cmTC_c0128' failed
+make[1]: *** [cmTC_c0128] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c0128/fast' failed
+make: *** [cmTC_c0128/fast] Error 2
+
+
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4c341/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4c341.dir/build.make CMakeFiles/cmTC_4c341.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4c341.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_4c341.dir/CheckIncludeFile.cxx.o -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: No such file or directory
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_4c341.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_4c341.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_4c341.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4c341/fast' failed
+make: *** [cmTC_4c341/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_04b5a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_04b5a.dir/build.make CMakeFiles/cmTC_04b5a.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_04b5a.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_04b5a.dir/CheckSymbolExists.c.o   -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_04b5a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04b5a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_04b5a.dir/CheckSymbolExists.c.o  -o cmTC_04b5a 
+CMakeFiles/cmTC_04b5a.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_04b5a.dir/build.make:97: recipe for target 'cmTC_04b5a' failed
+make[1]: *** [cmTC_04b5a] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_04b5a/fast' failed
+make: *** [cmTC_04b5a/fast] Error 2
+
+File /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2edf4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2edf4.dir/build.make CMakeFiles/cmTC_2edf4.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2edf4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2edf4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2edf4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2edf4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2edf4.dir/CheckFunctionExists.c.o  -o cmTC_2edf4 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2edf4.dir/build.make:97: recipe for target 'cmTC_2edf4' failed
+make[1]: *** [cmTC_2edf4] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2edf4/fast' failed
+make: *** [cmTC_2edf4/fast] Error 2
+
+
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_47338/fast"
+/usr/bin/make -f CMakeFiles/cmTC_47338.dir/build.make CMakeFiles/cmTC_47338.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_47338.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_47338.dir/CheckIncludeFile.cxx.o -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: No such file or directory
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_47338.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_47338.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_47338.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_47338/fast' failed
+make: *** [cmTC_47338/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f3fe8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f3fe8.dir/build.make CMakeFiles/cmTC_f3fe8.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f3fe8.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_f3fe8.dir/CheckSymbolExists.c.o   -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f3fe8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3fe8.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_f3fe8.dir/CheckSymbolExists.c.o  -o cmTC_f3fe8 
+CMakeFiles/cmTC_f3fe8.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f3fe8.dir/build.make:97: recipe for target 'cmTC_f3fe8' failed
+make[1]: *** [cmTC_f3fe8] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f3fe8/fast' failed
+make: *** [cmTC_f3fe8/fast] Error 2
+
+File /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3af68/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3af68.dir/build.make CMakeFiles/cmTC_3af68.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3af68.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3af68.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3af68
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3af68.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_3af68.dir/CheckFunctionExists.c.o  -o cmTC_3af68 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3af68.dir/build.make:97: recipe for target 'cmTC_3af68' failed
+make[1]: *** [cmTC_3af68] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3af68/fast' failed
+make: *** [cmTC_3af68/fast] Error 2
+
+
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7106f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7106f.dir/build.make CMakeFiles/cmTC_7106f.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7106f.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_7106f.dir/CheckIncludeFile.cxx.o -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: No such file or directory
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_7106f.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_7106f.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_7106f.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7106f/fast' failed
+make: *** [cmTC_7106f/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7c736/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7c736.dir/build.make CMakeFiles/cmTC_7c736.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7c736.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_7c736.dir/CheckSymbolExists.c.o   -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_7c736
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c736.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7c736.dir/CheckSymbolExists.c.o  -o cmTC_7c736 
+CMakeFiles/cmTC_7c736.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7c736.dir/build.make:97: recipe for target 'cmTC_7c736' failed
+make[1]: *** [cmTC_7c736] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7c736/fast' failed
+make: *** [cmTC_7c736/fast] Error 2
+
+File /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a6743/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a6743.dir/build.make CMakeFiles/cmTC_a6743.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a6743.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a6743.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a6743
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6743.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a6743.dir/CheckFunctionExists.c.o  -o cmTC_a6743 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a6743.dir/build.make:97: recipe for target 'cmTC_a6743' failed
+make[1]: *** [cmTC_a6743] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a6743/fast' failed
+make: *** [cmTC_a6743/fast] Error 2
+
+
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e2f62/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e2f62.dir/build.make CMakeFiles/cmTC_e2f62.dir/build
+make[1]: Entering directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e2f62.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_e2f62.dir/CheckIncludeFile.cxx.o -c /home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: No such file or directory
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_e2f62.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_e2f62.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_e2f62.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: Leaving directory '/home/nvidia/catkin_ws/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e2f62/fast' failed
+make: *** [cmTC_e2f62/fast] Error 2
+
+

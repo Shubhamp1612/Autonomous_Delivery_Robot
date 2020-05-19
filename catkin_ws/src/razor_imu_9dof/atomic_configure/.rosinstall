@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nvidia/catkin_ws/src/razor_imu_9dof/devel/setup.sh

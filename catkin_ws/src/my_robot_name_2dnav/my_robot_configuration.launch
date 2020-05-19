@@ -1,0 +1,39 @@
+<launch>
+
+
+
+
+<!--
+node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 100" />
+  <node pkg="odom_Setup" type="tf_odom" name="tf_odom"/> -->
+   
+  <node pkg="robot_setup_tf" type="tf_robot" name="tf_robot" />
+ 
+  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 100"/>
+
+<!--
+ <arg name="razor_config_file" default="$(find razor_imu_9dof)/config/my_razor.yaml"/>
+  <node pkg="razor_imu_9dof" type="imu_node.py" name="imu_node" output="screen">
+    <rosparam file="$(arg razor_config_file)" command="load"/>
+  </node>
+
+  <node name="rplidarNode"  pkg="rplidar_ros"  type="rplidarNode " output="screen">
+	  <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
+	  <param name="serial_baudrate"     type="int"    value="115200"/>
+
+	  <param name="frame_id"            type="string" value="laser"/>
+	  <param name="inverted"            type="bool"   value="false"/>
+	  <param name="angle_compensate"    type="bool"   value="true"/>
+  </node>
+
+  <node pkg="rosserial_python" type="serial_node.py" name="rosserial" output="screen" required="true">
+	<param name="port" value="/dev/arduino" />
+	<param name="baud" value="115200" />
+  </node> -->
+
+   
+
+
+ 
+
+</launch> 

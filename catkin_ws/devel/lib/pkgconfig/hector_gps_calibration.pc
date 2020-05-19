@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin_ws/devel
+
+Name: hector_gps_calibration
+Description: Description of hector_gps_calibration
+Version: 0.0.0
+Cflags: -I/home/nvidia/catkin_ws/src/hector_navigation/hector_gps_calibration/include
+Libs: -L${prefix}/lib -lhector_gps_calibration
+Requires: geodesy geometry_msgs roscpp rospy sensor_msgs std_msgs tf2 tf2_eigen tf2_ros urdf eigen
