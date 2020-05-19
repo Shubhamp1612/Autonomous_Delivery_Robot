@@ -1,0 +1,9 @@
+digraph G {
+"base_link" -> "laser"[label="Broadcaster: /tf_robot\nAverage rate: 10.204 Hz\nMost recent transform: 1588976638.463 ( 0.042 sec old)\nBuffer length: 4.900 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /odometry_publisher\nAverage rate: 1.250 Hz\nMost recent transform: 1588976637.692 ( 0.813 sec old)\nBuffer length: 4.000 sec\n"];
+"map" -> "odom"[label="Broadcaster: /map_odom_broadcaster\nAverage rate: 19.393 Hz\nMost recent transform: 1588976638.543 ( -0.039 sec old)\nBuffer length: 5.672 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1588976638.505"[ shape=plaintext ] ;
+ }->"map";
+}
