@@ -39,7 +39,7 @@ For other related tutorials refer: http://wiki.ros.org/ROS/Tutorials
 ## RPLidar
 
 1. To run rplidar node:</br>
---> ###### roslaunch rplidar_ros rplidar.launch
+--> ** roslaunch rplidar_ros rplidar.launch **
 
 2. To view lidar laser scan results on rviz:</br>
 --> ###### roslaunch rplidar_ros view_rplidar.launch
