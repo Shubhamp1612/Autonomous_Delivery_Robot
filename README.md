@@ -8,7 +8,7 @@ ROS is the operating system for our robot. The official source for all informati
 
 1. ROS has various distributions which are supported. The current recommended distributions are: ROS Kinetic or ROS Melodic
 
-2. Please note the ubuntu version you install on the Jetson TX2, affects the ROS distribution you can install. 
+2. Please note the ubuntu version you install on the Jetson TX2, affects the ROS distribution you can install.\ 
 -> ROS Kinetic ONLY supports Wily (Ubuntu 15.10), Xenial (Ubuntu 16.04) and Jessie (Debian 8) for debian packages.
 -> ROS Melodic is primarily targeted at the Ubuntu 18.04 (Bionic) release.
 
