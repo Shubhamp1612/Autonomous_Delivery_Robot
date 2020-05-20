@@ -39,13 +39,13 @@ For other related tutorials refer: http://wiki.ros.org/ROS/Tutorials
 ## RPLidar
 
 1. To run rplidar node:</br>
---> # roslaunch rplidar_ros rplidar.launch
+--> ###### roslaunch rplidar_ros rplidar.launch
 
 2. To view lidar laser scan results on rviz:</br>
---> # roslaunch rplidar_ros view_rplidar.launch
+--> ###### roslaunch rplidar_ros view_rplidar.launch
 
 3. To test obstacle detection in a range of 60 degrees use following command.</br>
---> # rosrun rplidar_ros rplidarNodeClient </br>
+--> ###### rosrun rplidar_ros rplidarNodeClient </br>
   By doing this, the car would stop if a obstacle is detected within a certain range only. The code for below can be modified as required using the file 'rplidar_ros/src/client.cpp'.
   
 
