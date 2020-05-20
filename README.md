@@ -56,6 +56,6 @@ For other related tutorials refer: http://wiki.ros.org/ROS/Tutorials
 2. First load the arduino code in file jetsoncar.ino onto the arduino board using the arduino IDE.
 
 3. Once the code is loaded, run the rosserial_arduino node using the following command : </br>
-rosrun rosserial_arduino serial_node.py _port:=/dev/ttyUSB0. , where you need to replace ttyUSB0 with the appropriate port number to which arduino is attached to.
+**rosrun rosserial_arduino serial_node.py _port:=/dev/ttyUSB0**. , where you need to replace ttyUSB0 with the appropriate port number to which arduino is attached to.
 
    
