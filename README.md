@@ -141,8 +141,17 @@ d) local_costmap_params.yaml
 e) my_robot_configuration.launch
 f) move_base.launch  -> beings together the configuration files at one place.
 
-5. AMCL
--> 
+5. AMCL:
+-> Amcl is a probabilistic localization system for a robot moving in 2D. To localize using laser data on the /scan topic.
+
+6. Finally, to run the navigation stack use the following commands in different terminals: </br>
+-> a) **roslaunch my_robot_configuration.launch**
+   b) **roslaunch move_base.launch**
+   c) **rosrun rviz rviz** </br>
+   The above commands will start the navigation stack and load the map on rviz. 
+   
+7. The initial position can be set on rviz by clicking on the '2D Pose Estimate' button. 
+
 
 </br>
 
