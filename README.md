@@ -92,7 +92,17 @@ replace the third line with </br>
 2. To save the map run the following command in a new terminal: </br>
 **rosrun map_server map_saver -f 'file'** (where 'file' is any location for ex: /tmp/my_map will save map files with name my_map.pgm and my_map.yaml in the /tmp folder)
 
-3. To view the map in rviz 
+3. Now you can shutdown the hector_slam node after saving the map.
+
+4. To load the map in rviz, run the following command: </br>
+**rosrun map_server map_server /tmp/my_map.yaml**  
+
+5. Then open rviz using command:
+**rosrun rviz rviz** 
+
+6. Then add a Map display in rviz, and point it to the topic /map and the previously saved map will be visible in rviz.
+
+
 
 ## ROS Navigation Stack
 
