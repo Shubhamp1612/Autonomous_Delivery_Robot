@@ -110,7 +110,10 @@ replace the third line with </br>
 A 2D navigation stack that takes in information from odometry, sensor streams, and a goal pose and outputs safe velocity commands that are sent to a mobile base. </br>
 Refer : http://wiki.ros.org/navigation
 
-We followed the tutorials on the below webpage, which describes the tutorials to setup and run the robot navigation stack: http://wiki.ros.org/navigation/Tutorials 
+We followed the tutorials on the below webpage, which describes the tutorials to setup and run the robot navigation stack: http://wiki.ros.org/navigation/Tutorials
+
+Setting up the robot for navigation is described specifically at: </br>
+http://wiki.ros.org/navigation/Tutorials/RobotSetup
 
 
 1. First, you need to broadcast transformations betweeen different co-ordinate frames using ROS TF. </br>
@@ -122,5 +125,29 @@ Refer http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF that provides a gui
  The tree for our project navigation stack is given below:
 
 ![navigationFrame](https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames_navigation_stack.png)
+
+
+3. The navigation stack requires that odometry information be published using tf. The link below provides an example of publishing odometry information for the navigation stack. </br>
+http://wiki.ros.org/navigation/Tutorials/RobotSetup/Odom
+
+4. Navigation Stack Setup:
+-> The section **'Navigation Stack Setup'** on http://wiki.ros.org/navigation/Tutorials/RobotSetup describes steps to configure the navigation stack. </br>
+The package at location:
+https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/tree/master/catkin_ws/src/my_robot_name_2dnav contains the costmap and robot configuration files: </br>
+a) base_local_planner_params.yaml
+b) costmap_common_params.yaml
+c) global_costmap_params.yaml
+d) local_costmap_params.yaml
+e) my_robot_configuration.launch
+f) move_base.launch  -> beings together the configuration files at one place.
+
+5. AMCL
+-> 
+
+</br>
+
+
+
+
 
 
