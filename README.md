@@ -53,6 +53,8 @@ For other related tutorials refer: http://wiki.ros.org/ROS/Tutorials
 
 1. For instructions and tutorials on arduino setup, follow the official ros tutorials: </br> http://wiki.ros.org/rosserial_arduino/Tutorials
 
+2. jetsoncar.ino file contains 
+
 2. First load the arduino code in file jetsoncar.ino onto the arduino board using the arduino IDE.
 
 3. Once the code is loaded, run the rosserial_arduino node using the following command : </br>
@@ -79,9 +81,9 @@ replace the second last line with: </br>
 replace the third line with </br>
 <param name="/use_sim_time" value="false"/>
 
-5. Run roslaunch rplidar_ros rplidar.launch
+5. Run **roslaunch rplidar_ros rplidar.launch**
 
-6. Run roslaunch hector_slam_launch tutorial.launch.  </br>
+6. Run **roslaunch hector_slam_launch tutorial.launch**.  </br>
 --> This command will open up rviz with slam data. To create a map move the robot in the environment using rc car remote or teleop operations on keyboard. As the car moves, it will generate the map using the RPlidar scans.
 
 
@@ -103,10 +105,19 @@ replace the third line with </br>
 6. Then add a Map display in rviz, and point it to the topic /map and the previously saved map will be visible in rviz.
 
 
-
 ## ROS Navigation Stack
 
 A 2D navigation stack that takes in information from odometry, sensor streams, and a goal pose and outputs safe velocity commands that are sent to a mobile base. </br>
 Refer : http://wiki.ros.org/navigation
 
+We followed the tutorials on the below webpage, which describes the tutorials to setup and run the robot navigation stack: http://wiki.ros.org/navigation/Tutorials 
+
+
+1. First, you need to publish transformations betweeen different co-ordinate frames using ROS TF.
+
+<object data="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
