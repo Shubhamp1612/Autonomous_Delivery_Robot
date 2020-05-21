@@ -65,7 +65,7 @@ rosrun rplidar_ros rplidarNodeClient
 2. First load the arduino code in file jetsoncar.ino onto the arduino board using the arduino IDE.
 
 3. Once the code is loaded, run the rosserial_arduino node using the following command : </br>
-**rosrun rosserial_arduino serial_node.py _port:=/dev/ttyUSB0**. , where you need to replace ttyUSB0 with the appropriate port number to which arduino is attached to.
+```rosrun rosserial_arduino serial_node.py _port:=/dev/ttyUSB0``` </br>. , where you need to replace ttyUSB0 with the appropriate port number to which arduino is attached to.
 
 
 ## Generating map using Hector Slam
@@ -90,7 +90,7 @@ replace the third line with </br>
 
 5. Run ```roslaunch rplidar_ros rplidar.launch```
 
-6. Run '''roslaunch hector_slam_launch tutorial.launch'''.  </br>
+6. Run ```roslaunch hector_slam_launch tutorial.launch```.  </br>
 --> This command will open up rviz with slam data. To create a map move the robot in the environment using rc car remote or teleop operations on keyboard. As the car moves, it will generate the map using the RPlidar scans.
 
 
@@ -99,15 +99,15 @@ replace the third line with </br>
 1. When the map is generated using hector slam, we need to save the map for further use in our robot navigation.
 
 2. To save the map run the following command in a new terminal: </br>
-'''rosrun map_server map_saver -f 'file'''' (where 'file' is any location for ex: /tmp/my_map will save map files with name my_map.pgm and my_map.yaml in the /tmp folder)
+```rosrun map_server map_saver -f 'file``` (where 'file' is any location for ex: /tmp/my_map will save map files with name my_map.pgm and my_map.yaml in the /tmp folder)
 
 3. Now you can shutdown the hector_slam node after saving the map.
 
 4. To load the map in rviz, run the following command: </br>
-'''rosrun map_server map_server /tmp/my_map.yaml'''  
+```rosrun map_server map_server /tmp/my_map.yaml```  
 
 5. Then open rviz using command:
-'''rosrun rviz rviz''' 
+```rosrun rviz rviz``` 
 
 6. Then add a Map display in rviz, and point it to the topic /map and the previously saved map will be visible in rviz.
 
@@ -127,7 +127,7 @@ http://wiki.ros.org/navigation/Tutorials/RobotSetup
 Refer http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF that provides a guide to set up your robot to start using tf.
 
 2. To visualize the full tree of coordinate transforms which are being broadcasted, run the following command when all nodes are up and running: </br>
- '''rosrun tf view_frames'''
+ ```rosrun tf view_frames```
  This generates a pdf file named frames.pdf which shows the transform tree. </br>
  The tree for our project navigation stack is given below:
 
@@ -152,9 +152,9 @@ f) move_base.launch  -> beings together the configuration files at one place.
 -> Amcl is a probabilistic localization system for a robot moving in 2D. To localize using laser data on the /scan topic.
 
 6. Finally, to run the navigation stack use the following commands in different terminals: </br>
-'''roslaunch my_robot_configuration.launch'''
-'''roslaunch move_base.launch'''
-'''rosrun rviz rviz''' </br>
+```roslaunch my_robot_configuration.launch```
+```roslaunch move_base.launch```
+```rosrun rviz rviz``` </br>
    The above commands will start the navigation stack and load the map on rviz. 
    
 7. The initial position and orientatio of the robot can be set on rviz by clicking on the '2D Pose Estimate' button. This publishes data on the /initialPose topic.  
