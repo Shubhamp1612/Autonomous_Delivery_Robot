@@ -65,7 +65,7 @@ rosrun rplidar_ros rplidarNodeClient
 2. First load the arduino code in file jetsoncar.ino onto the arduino board using the arduino IDE.
 
 3. Once the code is loaded, run the rosserial_arduino node using the following command : </br>
-```rosrun rosserial_arduino serial_node.py _port:=/dev/ttyUSB0``` </br>. , where you need to replace ttyUSB0 with the appropriate port number to which arduino is attached to.
+```rosrun rosserial_arduino serial_node.py _port:=/dev/ttyUSB0``` </br> , where you need to replace ttyUSB0 with the appropriate port number to which arduino is attached to.
 
 
 ## Generating map using Hector Slam
@@ -94,7 +94,7 @@ replace the third line with </br>
 --> This command will open up rviz with slam data. To create a map move the robot in the environment using rc car remote or teleop operations on keyboard. As the car moves, it will generate the map using the RPlidar scans.
 
 
-## Saving the map
+## Saving and loading the map
 
 1. When the map is generated using hector slam, we need to save the map for further use in our robot navigation.
 
@@ -141,14 +141,14 @@ http://wiki.ros.org/navigation/Tutorials/RobotSetup/Odom
 -> The section **'Navigation Stack Setup'** on http://wiki.ros.org/navigation/Tutorials/RobotSetup describes steps to configure the navigation stack. </br>
 The package at location:
 https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/tree/master/catkin_ws/src/my_robot_name_2dnav contains the costmap and robot configuration files: </br>
-a) base_local_planner_params.yaml
-b) costmap_common_params.yaml
-c) global_costmap_params.yaml
-d) local_costmap_params.yaml
-e) my_robot_configuration.launch
+a) base_local_planner_params.yaml </br>
+b) costmap_common_params.yaml </br>
+c) global_costmap_params.yaml </br>
+d) local_costmap_params.yaml </br>
+e) my_robot_configuration.launch </br>
 f) move_base.launch  -> beings together the configuration files at one place.
 
-5. AMCL:
+5. AMCL: </br>
 -> Amcl is a probabilistic localization system for a robot moving in 2D. To localize using laser data on the /scan topic.
 
 6. Finally, to run the navigation stack use the following commands in different terminals: </br>
@@ -157,10 +157,17 @@ f) move_base.launch  -> beings together the configuration files at one place.
 ```rosrun rviz rviz``` </br>
    The above commands will start the navigation stack and load the map on rviz. 
    
-7. The initial position and orientatio of the robot can be set on rviz by clicking on the '2D Pose Estimate' button. This publishes data on the /initialPose topic.  
+7. The initial position and orientation of the robot can be set on rviz by clicking on the '2D Pose Estimate' button. This publishes data on the /initialpose topic. </br>
+   Using the below command, we can get the exact x,y co-ordinates of the initial pose we set using rviz.
+   ```rostopic echo geometry_msgs/PoseWithCovarianceStamped```
+   
+8. Navigation goals can also be sent programatically. The co-ordinates we set using rviz can be used to set the initial x,y points in code. The below link provides an example of sending the navigation stack a simple goal using code.  </br>
+    http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals
 
 
-</br>
+## Web server
+
+The web_server package consists of code to connect to the sql database and publish on the 'orders' topic 
 
 
 
