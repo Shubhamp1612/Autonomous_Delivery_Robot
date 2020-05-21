@@ -71,7 +71,7 @@ rosrun rplidar_ros rplidarNodeClient
 
 1. For instructions and tutorials on arduino setup, follow the official ros tutorials: </br> http://wiki.ros.org/rosserial_arduino/Tutorials
 
-2. jetsoncar.ino file contains 
+2. jetsoncar.ino file contains the code to listen to cmd_vel topic and set the throttle speed and steering angle.
 
 2. First load the arduino code in file jetsoncar.ino onto the arduino board using the arduino IDE.
 
@@ -90,9 +90,11 @@ Hector slam contains ROS packages related to performing SLAM in unstructured env
 3. In catkin_ws/src/rplidar_hector_slam/hector_slam/hector_mapping/launch/mapping_default.launch
 replace the second last line with: </br>
   <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 100" />
-  the third line with
+  
+  and the third line with
   <arg name="base_frame" default="base_link"/>
-  the fourth line with
+  
+  and the fourth line with
   <arg name="odom_frame" default="base_link"/>
   
 4. In catkin_ws/src/rplidar_hector_slam/hector_slam/hector_slam_launch/launch/tutorial.launch
