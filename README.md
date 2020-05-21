@@ -88,14 +88,19 @@ Hector slam contains ROS packages related to performing SLAM in unstructured env
 2. In your catkin workspace run source /devel/setup.bash
 
 3. In catkin_ws/src/rplidar_hector_slam/hector_slam/hector_mapping/launch/mapping_default.launch
-replace the second last line with: </br>
+replace the second last line with:
+  ```
   <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 100" />
+  ```
   
-  and the third line with
+   and the third line with
+  ```
   <arg name="base_frame" default="base_link"/>
-  
+  ```
   and the fourth line with
+  ```
   <arg name="odom_frame" default="base_link"/>
+  ```
   
 4. In catkin_ws/src/rplidar_hector_slam/hector_slam/hector_slam_launch/launch/tutorial.launch
 replace the third line with </br>
