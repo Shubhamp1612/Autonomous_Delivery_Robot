@@ -44,10 +44,15 @@ roslaunch rplidar_ros rplidar.launch
 ```
 
 2. To view lidar laser scan results on rviz:</br>
---> **roslaunch rplidar_ros view_rplidar.launch**
+```
+roslaunch rplidar_ros view_rplidar.launch
+```
 
 3. To test obstacle detection in a range of 60 degrees use following command.</br>
---> **rosrun rplidar_ros rplidarNodeClient** </br>
+```
+rosrun rplidar_ros rplidarNodeClient
+```
+</br>
   By doing this, the car would stop if a obstacle is detected within a certain range only. The code for below can be modified as required using the file 'rplidar_ros/src/client.cpp'.
   
 
@@ -83,7 +88,7 @@ replace the second last line with: </br>
 replace the third line with </br>
 <param name="/use_sim_time" value="false"/>
 
-5. Run **roslaunch rplidar_ros rplidar.launch**
+5. Run ```roslaunch rplidar_ros rplidar.launch```
 
 6. Run **roslaunch hector_slam_launch tutorial.launch**.  </br>
 --> This command will open up rviz with slam data. To create a map move the robot in the environment using rc car remote or teleop operations on keyboard. As the car moves, it will generate the map using the RPlidar scans.
