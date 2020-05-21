@@ -117,7 +117,7 @@ We followed the tutorials on the below webpage, which describes the tutorials to
 
 <object data="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
