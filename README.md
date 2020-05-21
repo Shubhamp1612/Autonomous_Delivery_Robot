@@ -63,7 +63,7 @@ For other related tutorials refer: http://wiki.ros.org/ROS/Tutorials
 
 Hector slam contains ROS packages related to performing SLAM in unstructured environments.</br>
 
-1. Clone repository: https://github.com/tu-darmstadt-ros-pkg/hector_slam for installation and usage.
+1. Clone the following repository in /src folder of your catkin workspace:</br> https://github.com/tu-darmstadt-ros-pkg/hector_slam for installation and usage.
 
 2. In your catkin workspace run source /devel/setup.bash
 
