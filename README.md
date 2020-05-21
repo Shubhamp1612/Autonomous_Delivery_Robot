@@ -117,3 +117,6 @@ We followed the tutorials on the below webpage, which describes the tutorials to
 
 [frames.pdf](https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf)
 
+<object data="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf" type="application/pdf" title="SamplePdf" width="500" height="720">
+    <a href="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf">shree</a> 
+</object>
