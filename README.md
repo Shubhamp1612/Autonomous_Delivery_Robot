@@ -167,7 +167,7 @@ f) move_base.launch  -> beings together the configuration files at one place.
 
 ## Web server
 
-1. The web_server package consists of code in file 'talker.py' (https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/catkin_ws/src/web_server/scripts/talker.py)to connect to the sql database and publish on the 'orders' topic as soon as an order arrives with 'Ready' state. This code should be modified as required.
+1. The web_server package consists of code in file 'talker.py' (https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/catkin_ws/src/web_server/scripts/talker.py) to connect to the sql database and publish on the 'orders' topic as soon as an order arrives with 'Ready' state. This code should be modified as required.
 
 
 
