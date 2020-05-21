@@ -113,6 +113,14 @@ Refer : http://wiki.ros.org/navigation
 We followed the tutorials on the below webpage, which describes the tutorials to setup and run the robot navigation stack: http://wiki.ros.org/navigation/Tutorials 
 
 
-1. First, you need to publish transformations betweeen different co-ordinate frames using ROS TF.
+1. First, you need to broadcast transformations betweeen different co-ordinate frames using ROS TF. </br>
+Refer http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF that provides a guide to set up your robot to start using tf.
+
+2. To visualize the full tree of coordinate transforms which are being broadcasted, run the following command when all nodes are up and running: </br>
+ **rosrun tf view_frames**
+ This generates a pdf file named frames.pdf which shows the transform tree. </br>
+ The tree for our project navigation stack is given below:
 
 ![navigationFrame](https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames_navigation_stack.png)
+
+
