@@ -115,9 +115,5 @@ We followed the tutorials on the below webpage, which describes the tutorials to
 
 1. First, you need to publish transformations betweeen different co-ordinate frames using ROS TF.
 
-<object data="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+[frames.pdf](https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/frame_navigation_stack/frames.pdf)
 
