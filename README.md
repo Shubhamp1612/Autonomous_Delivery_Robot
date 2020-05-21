@@ -21,6 +21,17 @@ For ROS kinetic installation:</br>
 For ROS melodic installation:</br>
 -> http://wiki.ros.org/melodic/Installation/Ubuntu
 
+## Installing JetPack SDK for Jetson TX2 On SSD
+
+1. Using a SSD as the root directory for development on a Jetson Development Kit provides many advantages, including faster disk times and much more storage. So, we used an external SSD to install JetPack SDK for Jetson TX2. 
+
+2. We followed the following sources to do this process: </br>
+https://github.com/DJTobias/Cherry-Autonomous-Racecar/blob/master/installGuides/InstallJetPackSSD
+https://www.jetsonhacks.com/2017/08/05/develop-on-ssd-nvidia-jetson-tx1-and-jetson-tx2/
+
+3. https://www.jetsonhacks.com/ is a very very important source of information for various aspects of Jetson TX2.
+
+
 ## Using ROS
 
 Some important steps to be followed when using ROS are as follows:
@@ -167,9 +178,11 @@ f) move_base.launch  -> beings together the configuration files at one place.
 
 ## Web server
 
-1. The web_server package consists of code in file 'talker.py' (https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/catkin_ws/src/web_server/scripts/talker.py) to connect to the sql database and publish on the 'orders' topic as soon as an order arrives with 'Ready' state. This code should be modified as required.
+1. The web_server package consists of code to interact with the my sql database and detect new orders. As soon as the restaurant food is ready to be delivered, the resturant worker has to set the status of order as Ready using the samsbot website.
 
-
+2. The code in file 'talker.py' (https://github.com/Shubhamp1612/Autonomous_Delivery_Robot/blob/master/catkin_ws/src/web_server/scripts/talker.py) helps to connect to the sql database and publish on the 'orders' topic as soon as an order arrives with 'Ready' state. This code should be modified as required.
+ 
+3. By subscribing to the 'orders' topic, one can get the details of new order which includes the location of the food to be delivered.
 
 
 
