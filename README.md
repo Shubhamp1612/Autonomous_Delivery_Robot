@@ -58,4 +58,45 @@ For other related tutorials refer: http://wiki.ros.org/ROS/Tutorials
 3. Once the code is loaded, run the rosserial_arduino node using the following command : </br>
 **rosrun rosserial_arduino serial_node.py _port:=/dev/ttyUSB0**. , where you need to replace ttyUSB0 with the appropriate port number to which arduino is attached to.
 
-   
+
+## Generating map using Hector Slam
+
+Hector slam contains ROS packages related to performing SLAM in unstructured environments.</br>
+
+1. Clone repository: https://github.com/tu-darmstadt-ros-pkg/hector_slam for installation and usage.
+
+2. In your catkin workspace run source /devel/setup.bash
+
+3. In catkin_ws/src/rplidar_hector_slam/hector_slam/hector_mapping/launch/mapping_default.launch
+replace the second last line with: </br>
+  <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 100" />
+  the third line with
+  <arg name="base_frame" default="base_link"/>
+  the fourth line with
+  <arg name="odom_frame" default="base_link"/>
+  
+4. In catkin_ws/src/rplidar_hector_slam/hector_slam/hector_slam_launch/launch/tutorial.launch
+replace the third line with </br>
+<param name="/use_sim_time" value="false"/>
+
+5. Run roslaunch rplidar_ros rplidar.launch
+
+6. Run roslaunch hector_slam_launch tutorial.launch.  </br>
+--> This command will open up rviz with slam data. To create a map move the robot in the environment using rc car remote or teleop operations on keyboard. As the car moves, it will generate the map using the RPlidar scans.
+
+
+## Saving the map
+
+1. When the map is generated using hector slam, we need to save the map for further use in our robot navigation.
+
+2. To save the map run the following command in a new terminal: </br>
+**rosrun map_server map_saver -f 'file'** (where 'file' is any location for ex: /tmp/my_map will save map files with name my_map.pgm and my_map.yaml in the /tmp folder)
+
+3. To view the map in rviz 
+
+## ROS Navigation Stack
+
+A 2D navigation stack that takes in information from odometry, sensor streams, and a goal pose and outputs safe velocity commands that are sent to a mobile base. </br>
+Refer : http://wiki.ros.org/navigation
+
+
